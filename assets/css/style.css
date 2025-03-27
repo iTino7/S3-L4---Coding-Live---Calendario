@@ -15,7 +15,7 @@ body {
     text-align: center;
     width: 650px;
     margin: auto;
-    
+
 }
 
 .tabellone .number {
@@ -31,4 +31,14 @@ body {
     font-weight: bold;
     text-align: center;
     margin: 5px;
+}
+
+.containerButton button {
+    border: 2px solid #cc122b;
+    color: white;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: #e2bb80;
+    cursor: pointer;
+
 }

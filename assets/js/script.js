@@ -1,10 +1,6 @@
-const appointments = [];
-
 const createNumber = (e) => {
   const tabellone = document.getElementById("tabellone");
   for (let i = 0; i < 90; i++) {
-    appointments.push([]);
-
     const cellDiv = document.createElement("div");
     cellDiv.classList.add("number");
     const h2 = document.createElement("h2");
@@ -13,6 +9,19 @@ const createNumber = (e) => {
     cellDiv.appendChild(h2);
     tabellone.appendChild(cellDiv);
   }
+
+  const randomNumber = () => {
+    const numbers = document.querySelectorAll(".number");
+    const randomIndex = Math.floor(Math.random() * numbers.length);
+    numbers[randomIndex].style.backgroundColor = "black";
+    numbers[randomIndex].style.color = "white";
+  };
+
+  const button = document.getElementById("containerButton");
+
+  button.addEventListener("click", randomNumber);
 };
 
-createNumber();
+window.addEventListener("DOMContentLoaded", () => {
+  createNumber();
+});
